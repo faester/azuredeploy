@@ -1,4 +1,4 @@
-$cert = Get-Item Cert:\LocalMachine\My\98a654ef795a70153d681e8c0cef606fd6cf5a2d
+$cert = Get-Item Cert:\LocalMachine\My\98A654EF795A70153D681E8C0CEF606FD6CF5A2D
 
 $packageFolder = "package"
 $ProjectName = "AzureTest"
