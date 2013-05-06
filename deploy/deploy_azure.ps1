@@ -1,11 +1,11 @@
-$cert = Get-Item Cert:\LocalMachine\My\98A654EF795A70153D681E8C0CEF606FD6CF5A2D
-
 $packageFolder = "package"
 $ProjectName = "AzureTest"
 $subscription = "hluw01"
 $service = "os-test1"
+
+$cert = Get-Item Cert:\LocalMachine\My\98A654EF795A70153D681E8C0CEF606FD6CF5A2D
+
 $slot = "staging" #staging or production
-$BuildConfigName = "Release"
 $package = "$packageFolder\$ProjectName.cspkg"
 $configuration = "$packageFolder\ServiceConfiguration.Cloud.cscfg"
 $timeStampFormat = "g"
