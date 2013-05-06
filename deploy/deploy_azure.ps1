@@ -1,4 +1,4 @@
-$packageFolder = "package:>"
+$packageFolder = "package"
 $ProjectName = "AzureTest"
 $subscription = "hluw01"
 $service = "os-test1"
@@ -52,7 +52,7 @@ function UpgradeDeployment()
 {
     write-progress -id 3 -activity "Upgrading Deployment" -Status "In progress"
     Write-Output "$(Get-Date -f $timeStampFormat) - Upgrading Deployment: In progress"
-    Write-Output "Updating $package"
+    Write-Output "Updating: $package"
  
     # perform Update-Deployment
     $setdeployment = Set-AzureDeployment -Upgrade -Slot $slot -Package $package -Configuration $configuration -label $deploymentLabel -ServiceName $service -Force
