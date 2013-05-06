@@ -13,7 +13,7 @@ $deploymentLabel = "ContinuousDeploy to $service v%build.number%"
  
 #Set-AzureSubscription -CurrentStorageAccount $service -SubscriptionName $subscription -certificate $cert
 Set-AzureSubscription -SubscriptionName $subscription -SubscriptionId bdc2f900-6fd7-4e1a-bb5c-c4a97310496c -Certificate $cert
-Select-AzureSubscrsption -SubscriptionName hluw01
+Select-AzureSubscription -SubscriptionName hluw01
 $storageAccounts = Get-AzureStorageAccount
 Set-AzureStorageAccount $storageAccounts[0].Label
 Set-AzureSubscription $subscription  -CurrentStorageAccount $storageAccounts[0].Label
