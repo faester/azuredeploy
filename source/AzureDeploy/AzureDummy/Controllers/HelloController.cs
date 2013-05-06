@@ -10,7 +10,7 @@ namespace AzureDummy.Controllers
     {
         public ActionResult Index()
         {
-            return Content("World");
+            return Content("World 2");
         }
     }
 }
