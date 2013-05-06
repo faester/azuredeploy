@@ -1,9 +1,11 @@
+$certid = $Env:DeployCertThumbprint
+if (-Not $certid) { $certid = "98A654EF795A70153D681E8C0CEF606FD6CF5A2D" }
 $packageFolder = "package"
 $ProjectName = "AzureTest"
 $subscription = "hluw01"
 $service = "os-test1"
 
-$cert = Get-Item Cert:\LocalMachine\My\98A654EF795A70153D681E8C0CEF606FD6CF5A2D
+$cert = Get-Item Cert:\LocalMachine\My\$certid
 
 $slot = "staging" #staging or production
 $package = "$packageFolder\$ProjectName.cspkg"
